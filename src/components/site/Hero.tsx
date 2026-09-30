@@ -73,7 +73,7 @@ export function Hero() {
               </a>
               <a
                 href={profile.resumeUrl}
-                download
+                download="Dhaval_Kamaliya_Resume.pdf"
                 data-cursor="cta"
                 className="group inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3.5 text-sm font-semibold tracking-wide transition-all duration-300 hover:-translate-y-0.5 hover:border-foreground/40 active:translate-y-0"
               >

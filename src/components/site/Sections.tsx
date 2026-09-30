@@ -6,6 +6,7 @@ import {
   navLinks,
   processSteps,
   profile,
+  portrait,
   coreSkills,
   tools,
   services,
@@ -28,14 +29,16 @@ export function About() {
         <Reveal>
           <div className="relative">
             <div className="aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-surface">
-              <div className="grid h-full place-items-center text-center">
-                <div className="px-6">
-                  <div className="mx-auto grid size-16 place-items-center rounded-full border border-dashed border-border text-muted-foreground">
-                    <Plus className="size-5" />
-                  </div>
-                  <p className="mt-4 text-sm text-muted-foreground">[ADD YOUR PORTRAIT PHOTO]</p>
-                </div>
-              </div>
+              {portrait ? (
+                <img
+                  src={portrait}
+                  alt="Dhaval Kamaliya, UI/UX Designer"
+                  width={800}
+                  height={1000}
+                  loading="lazy"
+                  className="h-full w-full object-cover object-top"
+                />
+              ) : null}
             </div>
             <div className="absolute -right-3 -bottom-3 rounded-xl border border-border bg-card px-4 py-3 text-sm shadow-[0_20px_50px_-40px_rgba(0,0,0,0.6)]">
               <span className="eyebrow">Based in</span>
@@ -315,7 +318,7 @@ export function ResumeCta() {
                 </a>
                 <a
                   href={profile.resumeUrl}
-                  download
+                  download="Dhaval_Kamaliya_Resume.pdf"
                   data-cursor="cta"
                   className="rounded-full border border-current/30 px-6 py-3.5 text-sm font-medium transition-colors hover:bg-primary-foreground/10"
                 >
