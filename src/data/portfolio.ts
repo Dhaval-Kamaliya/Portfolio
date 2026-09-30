@@ -14,6 +14,8 @@ const asset = (name: string): string | undefined => {
   return key ? assetModules[key] : undefined;
 };
 
+export const portrait = asset("portrait");
+
 const safarMockup = asset("safar-mobile-app-mockup-v2");
 const jobPortalMockup = asset("job-portal-mobile-app-mockup-v2");
 const foodDeliveryRiderMockup = asset("food-delivery-rider-mockup-v2");
@@ -33,7 +35,7 @@ export const profile = {
   location: "Ahmedabad, Gujarat, India",
   email: "dhavalkamaliya097@gmail.com",
   phone: "+91 7046844645",
-  resumeUrl: "#", // upload resume PDF to /public and link it here
+  resumeUrl: `${import.meta.env.BASE_URL}Dhaval_Kamaliya_Resume.pdf`, // file lives in /public
   socials: [
     { label: "LinkedIn", url: "#" },
     { label: "Behance", url: "#" },
