@@ -7,7 +7,7 @@
  * While the ID is still the placeholder, nothing is sent anywhere.
  */
 export const GA_MEASUREMENT_ID: string =
-  (import.meta.env["VITE_GA_ID"] as string | undefined) ?? "G-XXXXXXXXXX";
+  (import.meta.env["VITE_GA_ID"] as string | undefined) ?? "G-FF1ZGN51XG";
 
 type Params = Record<string, string | number | boolean | undefined>;
 
