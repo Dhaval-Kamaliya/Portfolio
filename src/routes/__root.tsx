@@ -9,6 +9,7 @@ import {
 import { useEffect, useState } from "react";
 
 import { Toaster } from "@/components/ui/sonner";
+import { Analytics } from "@/components/site/Analytics";
 import { ScrollProgress, CustomCursor, BackToTop, FloatingTalk } from "@/components/site/Interactions";
 
 function NotFoundComponent() {
@@ -85,6 +86,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <HeadContent />
+      <Analytics />
       <ScrollProgress />
       {mounted && <CustomCursor />}
       <BackToTop />
