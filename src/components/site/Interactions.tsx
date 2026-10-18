@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { ArrowUp, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -136,8 +137,9 @@ export function FloatingTalk() {
   }, []);
 
   return (
-    <a
-      href="/#contact"
+    <Link
+      to="/"
+      hash="contact"
       data-cursor="cta"
       className={cn(
         "group fixed bottom-5 left-5 z-50 hidden items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-medium text-primary-foreground shadow-[0_22px_50px_-30px_rgba(0,0,0,0.8)] transition-all duration-300 lg:inline-flex",
@@ -146,6 +148,6 @@ export function FloatingTalk() {
     >
       Let's Talk
       <ArrowUpRight className="size-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-    </a>
+    </Link>
   );
 }

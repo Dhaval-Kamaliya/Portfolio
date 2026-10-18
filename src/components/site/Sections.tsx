@@ -12,6 +12,7 @@ import {
   services,
   thinking,
 } from "@/data/portfolio";
+import { Link } from "@tanstack/react-router";
 import { Reveal, RevealText } from "./Reveal";
 import { cn } from "@/lib/utils";
 
@@ -513,9 +514,9 @@ export function Footer() {
           <ul className="mt-4 space-y-2 text-sm">
             {navLinks.map((l) => (
               <li key={l.id}>
-                <a href={`/#${l.id}`} className="text-muted-foreground transition-colors hover:text-foreground">
+                <Link to="/" hash={l.id} className="text-muted-foreground transition-colors hover:text-foreground">
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
