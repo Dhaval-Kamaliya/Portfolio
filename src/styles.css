@@ -182,6 +182,9 @@
   display: inline-block;
   overflow: hidden;
   vertical-align: bottom;
+  /* room for descenders (g, p, y) and ascenders so the clip box never cuts glyphs */
+  padding-block: 0.1em 0.2em;
+  margin-block: -0.1em -0.2em;
 
   & > span {
     display: inline-block;
